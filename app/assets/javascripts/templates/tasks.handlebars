@@ -1,0 +1,69 @@
+<h1>Tasks</h1>
+
+<div class="task-wrapper">
+    <div id="newTasks" class="task-container">
+        <h4>Новые</h4>
+        <ul style="border: 1px solid red">
+            {{#each task in newTasks}}
+                <li>
+                    <strong>{{task.title}}</strong>
+                    <p>{{task.body}}</p>
+                    <button {{action 'delete' task}} class='delete'>x</button>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div id="specificationTasks" class="task-container">
+        <h4>Детализация</h4>
+        <ul style="border: 1px solid green">
+            {{#each task in specificationTasks}}
+                <li>
+                    <strong>{{task.title}}</strong>
+                    <p>{{task.body}}</p>
+                    <button {{action 'delete' task}} class='delete'>x</button>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div id="inWorkTasks" class="task-container">
+        <h4>В процессе</h4>
+        <ul style="border: 1px solid #ddd">
+            {{#each task in inWorkTasks}}
+                <li>
+                    <strong>{{task.title}}</strong>
+                    <p>{{task.body}}</p>
+                    <button {{action 'delete' task}} class='delete'>x</button>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div id="testingTasks" class="task-container">
+        <h4>Тестирование</h4>
+        <ul style="border: 1px solid #ddd">
+            {{#each task in testingTasks}}
+                <li>
+                    <strong>{{task.title}}</strong>
+                    <p>{{task.body}}</p>
+                    <button {{action 'delete' task}} class='delete'>x</button>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div id="finishedTasks" class="task-container">
+        <h4>Завершенные</h4>
+        <ul style="border: 1px solid #ddd">
+            {{#each task in finishedTasks}}
+                <li>
+                    <strong>{{task.title}}</strong>
+                    <p>{{task.body}}</p>
+                    <button {{action 'delete' task}} class='delete'>x</button>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{outlet}}
+</div>

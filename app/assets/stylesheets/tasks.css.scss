@@ -1,0 +1,23 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.task-wrapper{
+  .task-container{
+    float: left;
+    margin-right: 10px;
+    width: 19%;
+    ul{
+      padding: 5px;
+      li{
+        list-style: none;
+        position: relative;
+        .delete{
+          position: absolute;
+          top: -2px;
+          right: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
