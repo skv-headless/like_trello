@@ -1,9 +1,11 @@
-<h1>Tasks</h1>
+<h1 class="docs header">Tasks</h1>
 
-<div class="task-wrapper">
-    <div id="newTasks" class="task-container">
+{{outlet}}
+
+<div class="task-wrapper row">
+    <div id="newTasks" class="task-container large-2 columns">
         <h4>Новые</h4>
-        <ul style="border: 1px solid red">
+        <ul>
             {{#each task in newTasks}}
                 <li>
                     <strong>{{task.title}}</strong>
@@ -14,9 +16,9 @@
         </ul>
     </div>
 
-    <div id="specificationTasks" class="task-container">
+    <div id="specificationTasks" class="task-container large-2 columns">
         <h4>Детализация</h4>
-        <ul style="border: 1px solid green">
+        <ul>
             {{#each task in specificationTasks}}
                 <li>
                     <strong>{{task.title}}</strong>
@@ -27,9 +29,9 @@
         </ul>
     </div>
 
-    <div id="inWorkTasks" class="task-container">
+    <div id="inWorkTasks" class="task-container large-2 columns">
         <h4>В процессе</h4>
-        <ul style="border: 1px solid #ddd">
+        <ul>
             {{#each task in inWorkTasks}}
                 <li>
                     <strong>{{task.title}}</strong>
@@ -40,9 +42,9 @@
         </ul>
     </div>
 
-    <div id="testingTasks" class="task-container">
+    <div id="testingTasks" class="task-container large-2 columns">
         <h4>Тестирование</h4>
-        <ul style="border: 1px solid #ddd">
+        <ul>
             {{#each task in testingTasks}}
                 <li>
                     <strong>{{task.title}}</strong>
@@ -53,9 +55,9 @@
         </ul>
     </div>
 
-    <div id="finishedTasks" class="task-container">
+    <div id="finishedTasks" class="task-container large-2 columns">
         <h4>Завершенные</h4>
-        <ul style="border: 1px solid #ddd">
+        <ul>
             {{#each task in finishedTasks}}
                 <li>
                     <strong>{{task.title}}</strong>
@@ -65,5 +67,4 @@
             {{/each}}
         </ul>
     </div>
-    {{outlet}}
 </div>
