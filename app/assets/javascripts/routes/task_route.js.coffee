@@ -2,6 +2,7 @@
 
 LikeTrello.TaskRoute = Ember.Route.extend({
   model: (params)->
-    setupController: ()->
-      @controllerFor('topic').set('content', LikeTrello.Task.find(params.task_id));
+    LikeTrello.Task.find(params.task_id)
+#    setupController: ()->
+#      @controllerFor('topic').set('content', LikeTrello.Task.find(params.task_id));
 })
