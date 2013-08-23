@@ -1,4 +1,4 @@
-<h1 class="docs header">Tasks</h1>
+{{#linkTo 'tasks'}}<h1 class="docs header">Tasks</h1>{{/linkTo}}
 
 {{outlet}}
 
@@ -7,11 +7,13 @@
         <h4>Новые</h4>
         <ul>
             {{#each task in newTasks}}
-                <li>
-                    <strong>{{task.title}}</strong>
-                    <p>{{task.body}}</p>
-                    <button {{action 'delete' task}} class='delete'>x</button>
-                </li>
+              <li>
+                {{#linkTo 'task' task}}
+                  <strong>{{task.title}}</strong>
+                {{/linkTo}}
+                <p>{{task.body}}</p>
+                <button {{action 'delete' task}} class='delete'>x</button>
+              </li>
             {{/each}}
         </ul>
     </div>
@@ -21,9 +23,11 @@
         <ul>
             {{#each task in specificationTasks}}
                 <li>
+                  {{#linkTo 'task' task}}
                     <strong>{{task.title}}</strong>
-                    <p>{{task.body}}</p>
-                    <button {{action 'delete' task}} class='delete'>x</button>
+                  {{/linkTo}}
+                  <p>{{task.body}}</p>
+                  <button {{action 'delete' task}} class='delete'>x</button>
                 </li>
             {{/each}}
         </ul>
@@ -33,11 +37,13 @@
         <h4>В процессе</h4>
         <ul>
             {{#each task in inWorkTasks}}
-                <li>
-                    <strong>{{task.title}}</strong>
-                    <p>{{task.body}}</p>
-                    <button {{action 'delete' task}} class='delete'>x</button>
-                </li>
+              <li>
+                {{#linkTo 'task' task}}
+                  <strong>{{task.title}}</strong>
+                {{/linkTo}}
+                <p>{{task.body}}</p>
+                <button {{action 'delete' task}} class='delete'>x</button>
+              </li>
             {{/each}}
         </ul>
     </div>
@@ -46,11 +52,13 @@
         <h4>Тестирование</h4>
         <ul>
             {{#each task in testingTasks}}
-                <li>
-                    <strong>{{task.title}}</strong>
-                    <p>{{task.body}}</p>
-                    <button {{action 'delete' task}} class='delete'>x</button>
-                </li>
+              <li>
+                {{#linkTo 'task' task}}
+                  <strong>{{task.title}}</strong>
+                {{/linkTo}}
+                <p>{{task.body}}</p>
+                <button {{action 'delete' task}} class='delete'>x</button>
+              </li>
             {{/each}}
         </ul>
     </div>
@@ -59,12 +67,20 @@
         <h4>Завершенные</h4>
         <ul>
             {{#each task in finishedTasks}}
-                <li>
-                    <strong>{{task.title}}</strong>
-                    <p>{{task.body}}</p>
-                    <button {{action 'delete' task}} class='delete'>x</button>
-                </li>
+              <li>
+                {{#linkTo 'task' task}}
+                  <strong>{{task.title}}</strong>
+                {{/linkTo}}
+                <p>{{task.body}}</p>
+                <button {{action 'delete' task}} class='delete'>x</button>
+              </li>
             {{/each}}
         </ul>
     </div>
+</div>
+
+<div class='window-overlay'>
+  <div class="popup">
+    {{outlet popup}}
+  </div>
 </div>
