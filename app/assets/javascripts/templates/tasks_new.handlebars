@@ -1,0 +1,5 @@
+<div class="tasks-new">
+    {{view Ember.TextField valueBinding='title' cols="30"}}
+    {{view Ember.TextArea valueBinding='body' cols="50"}}
+    <button {{action 'save'}} class='btn'>Создать</button>
+</div>
