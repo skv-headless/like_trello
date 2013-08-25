@@ -6,10 +6,6 @@ LikeTrello.TasksNewRoute = Ember.Route.extend({
 
   renderTemplate: ()->
     @render({ outlet: 'popup' })
-    $('.window-overlay').show();
-
-  activate: ()->
-    $('.window-overlay').show();
 
   deactivate: ()->
     $('.window-overlay').hide();

@@ -8,9 +8,6 @@ LikeTrello.TaskRoute = Ember.Route.extend({
   model: (params)->
     LikeTrello.Task.find(params.task_id)
 
-  activate: ()->
-    $('.window-overlay').show();
-
   deactivate: ()->
     $('.window-overlay').hide();
 })

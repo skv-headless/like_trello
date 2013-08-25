@@ -1,4 +1,5 @@
 <div class="tasks-new">
+    {{#linkTo 'tasks' classNames="close"}}X{{/linkTo}}
     {{view Ember.TextField valueBinding='title' cols="30"}}
     {{view Ember.TextArea valueBinding='body' cols="50"}}
     <button {{action 'save'}} class='btn'>Создать</button>
