@@ -5,7 +5,7 @@
 <div class="task-wrapper row">
     <div id="newTasks" class="task-container large-2 columns">
         <h4>Новые</h4>
-        <ul>
+        <ul data-state="backlog">
             {{#each task in newTasks}}
               <li>
                 {{#linkTo 'task' task}}
@@ -21,7 +21,7 @@
 
     <div id="specificationTasks" class="task-container large-2 columns">
         <h4>Детализация</h4>
-        <ul>
+        <ul data-state="specification">
             {{#each task in specificationTasks}}
                 <li>
                   {{#linkTo 'task' task}}
@@ -36,7 +36,7 @@
 
     <div id="inWorkTasks" class="task-container large-2 columns">
         <h4>В процессе</h4>
-        <ul>
+        <ul data-state="in_work">
             {{#each task in inWorkTasks}}
               <li>
                 {{#linkTo 'task' task}}
@@ -51,7 +51,7 @@
 
     <div id="testingTasks" class="task-container large-2 columns">
         <h4>Тестирование</h4>
-        <ul>
+        <ul data-state="testing">
             {{#each task in testingTasks}}
               <li>
                 {{#linkTo 'task' task}}
@@ -66,7 +66,7 @@
 
     <div id="finishedTasks" class="task-container large-2 columns">
         <h4>Завершенные</h4>
-        <ul>
+        <ul data-state="finished">
             {{#each task in finishedTasks}}
               <li>
                 {{#linkTo 'task' task}}
