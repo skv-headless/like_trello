@@ -1,4 +1,6 @@
 LikeTrello::Application.routes.draw do
+  get "sessions/create"
+  get "sessions/destroy"
   get "static/index"
   resources :tasks
 
