@@ -21,6 +21,7 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require ember-auth
 //= require_self
 //= require like_trello
 

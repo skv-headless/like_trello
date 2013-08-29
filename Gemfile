@@ -47,3 +47,6 @@ gem 'ember-rails'
 gem 'ember-source', '1.0.0.rc6.4'
 gem "zurb-foundation", "~> 4.3.1"
 gem "jquery-ui-rails"
+gem "devise"
+gem 'ember-auth-rails'
+gem 'ember-auth-source'

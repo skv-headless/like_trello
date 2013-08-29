@@ -5,4 +5,7 @@ LikeTrello.Router.map ()->
   @resource 'tasks', ()->
     @resource 'task', path: '/:task_id'
     @route 'new'
+  @resource 'users', ->
+    @route 'show', {path: '/:user_id'}
+  @route 'sign-in'
 
